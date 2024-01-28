@@ -24,7 +24,7 @@ A Python tool for converting CSV data into PlantUML C4 model diagrams. This scri
    ```bash
    git clone https://github.com/alastairjallen/CSV-to-C4-Diagram-Generator.git
 
-	2.	Navigate to the cloned directory:
+2.	Navigate to the cloned directory:
 
 cd CSV-to-C4-Diagram-Generator
 
