@@ -9,10 +9,10 @@ def generate_system_context_puml(csv_file_path):
     puml_content = "@startuml\n"
     puml_content += "!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml\n"
     puml_content += "!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml\n"
-    puml_content += "AddRelTag(\"Consortium Owned Data Flow\")\n"
-    puml_content += "AddRelTag(\"HSE Owned Data Flow\", $lineColor=\"Green\", $textColor=\"Green\")\n"
-    puml_content += "AddElementTag(\"Phase1\")\n"
-    puml_content += "AddElementTag(\"Future Phase\", $bgColor=\"#FFCC00\")\n"
+    puml_content += "AddRelTag(\"Tag1\")\n"
+    puml_content += "AddRelTag(\"Tag2\", $lineColor=\"Green\", $textColor=\"Green\")\n"
+    puml_content += "AddElementTag(\"Tag3\")\n"
+    puml_content += "AddElementTag(\"Tag4\", $bgColor=\"#FFCC00\")\n"
     
     entities = {}
     boundaries = {}
@@ -93,7 +93,7 @@ def generate_system_context_puml(csv_file_path):
     return puml_file_path
 
 def generate_diagram(puml_file_path):
-    plantuml_jar_path = "C:\\Users\\XB321WW\\OneDrive - EY\\Documents\\AA\\Technology\\PlantUml\\plantuml-1.2023.13.jar"
+    plantuml_jar_path = "C:\\plantuml-1.2023.13.jar" # Replace with the path to your jar file
     output_format = "-tpng"
     command = f"java -jar \"{plantuml_jar_path}\" {output_format} \"{puml_file_path}\""
     subprocess.run(command, shell=True)
