@@ -1,0 +1,8 @@
+Entity Type,Entity Name,Description,Boundary,Boundary Description,Tag
+Person,User,User of the payment system,User Boundary,Description of User Boundary,
+System,Payment System,Processes user payments,Payment Boundary,Description of Payment Boundary,
+System_Ext,Bank,External bank system,,,
+,,,,,
+Source,Destination,Description,Technology,Tag
+User,Payment System,Submits payment,HTTPS,
+Payment System,Bank,Processes payment,REST API,Future Scope
