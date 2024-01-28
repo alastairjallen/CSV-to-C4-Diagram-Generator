@@ -28,38 +28,27 @@ A Python tool for converting CSV data into PlantUML C4 model diagrams. This scri
 
 cd CSV-to-C4-Diagram-Generator
 
-
-
 Usage
-
 	1.	Prepare your CSV file according to the format specified in the CSV Format section below.
 	2.	Run the script with the path to your CSV file:
 
 python csv_to_c4_diagram_generator.py your_file.csv
 
-
 	3.	The script will generate a PUML file and a PNG image of the diagram.
 
 CSV Format
+The CSV file has two sections. One for defining the entities. And the other for defining the relationships.  A sample CSV is available in the repo.
 
 Entities Section
 
 	•	Format: Entity Type, Entity Name, Description, Boundary, Boundary Description, Tag
 	•	Example:
 
-Person, User, User of the payment system, User Boundary, Description of User Boundary, 
-System, Payment System, Processes user payments, Payment Boundary, Description of Payment Boundary, 
-
-
 
 Relationships Section
 
 	•	Format: Source, Destination, Description, Technology, Tag
 	•	Example:
-
-User, Payment System, Submits payment, HTTPS, 
-Payment System, Bank, Processes payment, REST API, Future Scope
-
 
 
 Contributing
